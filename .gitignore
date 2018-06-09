@@ -1,8 +1,6 @@
 data/raw/EEG/
 data/raw/MRI/
 !.data/raw/EEG/README.md
-!.data/raw/TXT/README.md
-!.data/raw/XML?README.md
 !.data/raw/MRI/README.md
 
 # Byte-compiled / optimized / DLL files
