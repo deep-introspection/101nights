@@ -2,6 +2,7 @@ data/raw/EEG/
 !.data/raw/EEG/README.md
 data/derived/
 !.data/derived/README.md
+src/weights/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
