@@ -8,7 +8,9 @@ Scripts for the #101nights project, during the first [Brainhack Network](http://
 ## Backlog
 <img src="https://img.shields.io/badge/1-Ready%3F-red.svg?longCache=true&style=for-the-badge">
 
-:heavy_minus_sign: extract and format all the dreams (dream.txt) & daily logs (daily-logs.txt)
+:heavy_check_mark: extract and format all the dreams (dream.txt)
+
+:heavy_minus_sign: extract and format all daily logs (daily-logs.txt)
 
 :heavy_minus_sign: read XMLs for the "incepted" messages
 
