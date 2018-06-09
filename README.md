@@ -8,13 +8,13 @@ Scripts for the #101nights project, during the first [Brainhack Network](http://
 ## Backlog
 <img src="https://img.shields.io/badge/1-Ready%3F-red.svg?longCache=true&style=for-the-badge">
 
+:heavy_check_mark: read the brain waves data ([MNE Python](https://github.com/mne-tools/mne-python))
+
 :heavy_check_mark: extract and format all the dreams (dream.txt)
 
 :heavy_check_mark: extract and format all daily logs (daily-logs.txt)
 
 :soon: read XMLs for the "incepted" messages
-
-:heavy_check_mark: read the brain waves data ([MNE Python](https://github.com/mne-tools/mne-python))
 
 <img src="https://img.shields.io/badge/2-Steady...-orange.svg?longCache=true&style=for-the-badge">
 
