@@ -28,9 +28,9 @@ Scripts for the #101nights project, during the first [Brainhack Network](http://
 
 :soon: sleep stages inference ([SLEEPNET](https://arxiv.org/pdf/1707.08262.pdf))
 
-:heavy_minus_sign: test effect of "incepted" messages on the content of dreams
+:heavy_minus_sign: test effect of "incepted" messages on the content of dreams (tips: use [cosine distance](https://www.researchgate.net/post/What_is_the_best_way_to_measure_text_similarities_based_on_word2vec_word_embeddings))
 
-:heavy_minus_sign: extract semantic networks
+:heavy_minus_sign: extract [semantic networks](https://networkx.github.io/documentation/stable/auto_examples/graph/words.html#sphx-glr-auto-examples-graph-words-py)
 
 :heavy_minus_sign: extract functional brain networks
 
