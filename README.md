@@ -8,7 +8,7 @@ Scripts for the #101nights project, during the first [Brainhack Network](http://
 ## Backlog
 <img src="https://img.shields.io/badge/1-Ready%3F-red.svg?longCache=true&style=for-the-badge">
 
-- extract and format all the dreams
+- extract and format all the dreams (dream.txt) & daily logs (daily-logs.txt)
 - read XMLs for the "incepted" messages
 - read the brain waves data ([MNE Python](https://github.com/mne-tools/mne-python))
 
