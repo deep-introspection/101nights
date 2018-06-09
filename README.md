@@ -10,7 +10,7 @@ Scripts for the #101nights project, during the first [Brainhack Network](http://
 
 :heavy_check_mark: extract and format all the dreams (dream.txt)
 
-:heavy_check_sign: extract and format all daily logs (daily-logs.txt)
+:heavy_check_mark: extract and format all daily logs (daily-logs.txt)
 
 :heavy_minus_sign: read XMLs for the "incepted" messages
 
