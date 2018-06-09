@@ -12,23 +12,23 @@ Scripts for the #101nights project, during the first [Brainhack Network](http://
 
 :heavy_check_mark: extract and format all daily logs (daily-logs.txt)
 
-:heavy_minus_sign: read XMLs for the "incepted" messages
+:soon: read XMLs for the "incepted" messages
 
 :heavy_check_mark: read the brain waves data ([MNE Python](https://github.com/mne-tools/mne-python))
 
 <img src="https://img.shields.io/badge/2-Steady...-orange.svg?longCache=true&style=for-the-badge">
 
-:heavy_minus_sign: semantic modeling of dreams ([word2vec](https://radimrehurek.com/gensim/models/word2vec.html))
-
-:heavy_minus_sign: hierarchical block (cluster-topic) modeling of dreams ([abstractology](https://gitlab.com/solstag/abstractology/)
+:soon: semantic modeling of dreams ([word2vec](https://radimrehurek.com/gensim/models/word2vec.html))
 
 :heavy_check_mark: artifacts rejection & sensor interpolation ([autoreject](http://autoreject.github.io/))
 
+:heavy_minus_sign: hierarchical block (cluster-topic) modeling of dreams ([abstractology](https://gitlab.com/solstag/abstractology/)
+
 <img src="https://img.shields.io/badge/3-Go!-green.svg?longCache=true&style=for-the-badge">
 
-:heavy_minus_sign: test effect of "incepted" messages on the content of dreams
+:soon: sleep stages inference ([SLEEPNET](https://arxiv.org/pdf/1707.08262.pdf))
 
-:heavy_minus_sign: sleep stages inference ([SLEEPNET](https://arxiv.org/pdf/1707.08262.pdf))
+:heavy_minus_sign: test effect of "incepted" messages on the content of dreams
 
 :heavy_minus_sign: extract semantic networks
 
