@@ -1,7 +1,5 @@
 data/raw/EEG/
-data/raw/MRI/
 !.data/raw/EEG/README.md
-!.data/raw/MRI/README.md
 data/derived/
 !.data/derived/README.md
 
