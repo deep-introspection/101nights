@@ -18,11 +18,11 @@ Scripts for the #101nights project, during the first [Brainhack Network](http://
 
 <img src="https://img.shields.io/badge/2-Steady...-orange.svg?longCache=true&style=for-the-badge">
 
-:soon: semantic modeling of dreams ([word2vec](https://radimrehurek.com/gensim/models/word2vec.html))
-
 :heavy_check_mark: artifacts rejection & sensor interpolation ([autoreject](http://autoreject.github.io/))
 
-:heavy_minus_sign: hierarchical block (cluster-topic) modeling of dreams ([abstractology](https://gitlab.com/solstag/abstractology/)
+:soon: semantic modeling of dreams ([word2vec](https://radimrehurek.com/gensim/models/word2vec.html))
+
+:heavy_minus_sign: hierarchical block (cluster-topic) modeling of dreams ([abstractology](https://gitlab.com/solstag/abstractology/))
 
 <img src="https://img.shields.io/badge/3-Go!-green.svg?longCache=true&style=for-the-badge">
 
