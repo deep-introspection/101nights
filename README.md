@@ -1,7 +1,7 @@
 # #101nights
 Scripts for the #101nights project, during the first [Brainhack Network](http://brainhack-networks.com/program).
 
-[Website](http://www.dreamsessions.org/101nights.html) | [Data](https://www.dropbox.com/sh/bnzgspyjutjyjcq/AAD63mR1tLYxtytRVQiTCMLDa?dl=0) | [Slack channel](https://brainhack.slack.com/messages/101nights/) (to join Brainhack Slack click [here](https://brainhack-slack-invite.herokuapp.com/))
+[Website](http://www.dreamsessions.org/101nights.html) | [Data](https://www.dropbox.com/sh/bnzgspyjutjyjcq/AAD63mR1tLYxtytRVQiTCMLDa?dl=0) | [Slack channel](https://brainhack.slack.com/messages/101nights/) (to join the Brainhack Slack click [here](https://brainhack-slack-invite.herokuapp.com/))
 
 <img src="http://www.dreamsessions.org/images/101nights/Panorama.jpg">
 
