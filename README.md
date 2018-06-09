@@ -14,7 +14,7 @@ Scripts for the #101nights project, during the first [Brainhack Network](http://
 
 :heavy_check_mark: extract and format all daily logs (daily-logs.txt)
 
-: heavy_check_mark: read XMLs for the "incepted" messages
+:heavy_check_mark: read XMLs for the "incepted" messages
 
 <img src="https://img.shields.io/badge/2-Steady...-orange.svg?longCache=true&style=for-the-badge">
 
