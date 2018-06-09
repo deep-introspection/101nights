@@ -23,7 +23,7 @@ epochs = mne.epochs.Epochs(raw, events, tmin=0, tmax=30.0,
                            baseline=None, preload=True)
 
 
-
+thresh_func = partial(compute_thresholds, random_state=42, n_jobs=1)
 thresh_functhresh_  = partial(compute_thresholds,
 	                          random_state=42,
 	                          n_jobs=1)
