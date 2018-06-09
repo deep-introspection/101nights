@@ -1,6 +1,10 @@
+# https://github.com/skjerns/AutoSleepScorer
 from sleepscorer import Classifier
 import mne
+from autoreject import AutoReject, compute_thresholds
+from functools import partial
 import numpy as np
+np.random.seed(42)
 
 path_to_file = '../data/raw/EEG/Nathalie-78_20171118_123017.mff'
 raw = mne.io.read_raw_egi(path_to_file,
@@ -17,7 +21,32 @@ events = mne.event.make_fixed_length_events(
 	first_samp=True)
 epochs = mne.epochs.Epochs(raw, events, tmin=0, tmax=30.0,
                            baseline=None, preload=True)
-data = epochs.get_data() # load your python array, preprocessed
+
+
+
+thresh_functhresh_  = partial(compute_thresholds,
+	                          random_state=42,
+	                          n_jobs=1)
+
+ar = AutoReject(thresh_func=thresh_func, verbose='tqdm')
+
+index = np.random.choice(np.arange(len(epochs)),
+                         size=int(np.floor(len(epochs) * 0.1)),
+                         replace=False)
+ar.fit(epochs[index])
+
+epochs_clean = ar.transform(epochs)
+
+print("{:.2f}% epochs rejected (N={})".format(
+      epochs_clean.drop_log_stats(), len(epochs_clean)))
+
+
+data = epochs_clean.get_data() # load your python array, preprocessed
+
+
+
+
+
 data = data[:,np.array([8, 31, 229]),:3000]
 data = np.transpose(data, (0, 2, 1))
 assert(data.ndim==3 and data.shape[1:]==(3000,3))
