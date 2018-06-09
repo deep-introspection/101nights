@@ -34,4 +34,6 @@ Scripts for the #101nights project, during the first [Brainhack Network](http://
 
 :heavy_minus_sign: extract functional brain networks
 
+:heavy_minus_sign: [get to the source level](http://www.martinos.org/mne/stable/manual/cookbook.html) using MRI data
+
 :heavy_minus_sign: ...
