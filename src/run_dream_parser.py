@@ -52,8 +52,8 @@ def parse_times(df):
         names=[df.index.name, 'time'] )
 
     return pandas.DataFrame(
-       ( [df.loc[i, 'place'], dt, txt] for i, dt, txt in dtimed_texts ),
-        columns=['night', 'place', 'datetime', 'text'],
+       ( [df.loc[i, 'place'], txt] for i, _, txt in dtimed_texts ),
+        columns=['place', 'text'],
         index=new_index
     )
 
