@@ -1,8 +1,15 @@
 #! /bin/env python3
 
-"""Parses a document containing chunks of text separated by
-   text headers, loading them into a dataframe and saving
-   as csv files."""
+# GNU GPLv3
+# https://www.gnu.org/licenses/gpl-3.0.en.html
+# Contributors: Ale Abdo <abdo@member.fsf.org>
+
+""" Produces parsed CSV files ready for pandas.DataFrame
+    consumption from both dreams.txt and diary.txt.
+
+    More generally, parses a document containing chunks of
+    text separated by text headers, loading them into a
+    dataframe and saving as csv files."""
 
 import re, pandas
 from os import path
@@ -15,7 +22,8 @@ GET_MONTH = {'Sep':9, 'Oct':10, 'Nov':11, 'Dec':12}.get
 
 def FIX_TIMEZONE(dtimed_texts):
     """Sets datetimes to UTC"""
-    # this works since there are no records between 01:00 and 02:00
+    # this works since there are no records
+    # between 01:00 and 02:00 on tzchange
     tzchange = datetime64('2017-05-02T09:00')
     tzdelta0, tzdelta1 = timedelta64(7, 'h'), timedelta64(8, 'h')
     for item in dtimed_texts:
