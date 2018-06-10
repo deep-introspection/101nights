@@ -132,7 +132,7 @@ Sep,4
 
 14:18 Stand up, make my bed
 
-16:35 Walk to the market
+15:35 Walk to the market
 
 16:06 Have a beer at Friendly Market
 
@@ -485,7 +485,7 @@ Sep,10
 17:30 Slowly I get ready to go out
 
 
-15:58 Walk to Friendly Street
+17:58 Walk to Friendly Street
 
 
 18:05 In the organic market shop for 30 minutes
@@ -571,7 +571,7 @@ Day 11, Eugene
 Sep,12
 
 
-12:23 Start Acquisition Network and start a new recording
+00:23 Start Acquisition Network and start a new recording
 
 
 01:23 Cannot sleep and chat with Mauro in Chile for 20 minutes
@@ -604,7 +604,7 @@ Sep,12
 15:29 Go out of the shop and walk. Call a taxi at 15:45
 
 
-14:17 Shop at organic market in Friendly Street
+16:17 Shop at organic market in Friendly Street
 
 
 16:34 Have a beer outside
@@ -686,7 +686,7 @@ Sep,13
 20:39 Monet arrives and shaves my hair
 
 
-10:21 All set, she leaves. I lie down in bed
+22:21 All set, she leaves. I lie down in bed
 
 
 
@@ -1076,7 +1076,7 @@ Sep, 22
 08:31 A phone call wakes me up but I can hardly move
 
 
-09:55 Stop recording and turn off the computer system
+08:55 Stop recording and turn off the computer system
 
 
 09:18 Play Joan of Arc, Maid of Orléan, documentary online
@@ -1213,7 +1213,7 @@ Sep, 24
 14:48 Go inside Sunrise Asian Market, across the street
 
 
-14:16 I walk back throughout Willard School sports field
+15:16 I walk back throughout Willard School sports field
 
 
 15:33 Back in, I start to prepare food for lunch
@@ -2057,10 +2057,10 @@ Oct, 9
 20:07 Monet comes to help me with the electrodes until 21:18
 
 
-09:36 Check emails
+21:36 Check emails
 
 
-11:16 Watch a webcast of Jorge Luis Borges, on Buddhism
+23:16 Watch a webcast of Jorge Luis Borges, on Buddhism
 
 
 
@@ -2399,7 +2399,7 @@ Oct, 15
 11:43 I meet Meg at the parking lot
 
 
-11:19 Timothy comes in the apartment to fix the heating
+12:19 Timothy comes in the apartment to fix the heating
 
 
 12:29 I make my bed and clean everything
@@ -2835,7 +2835,7 @@ Oct, 22
 12:36 Rinse the net and clean the kitchen
 
 
-01:02 I lie down in bed and fall asleep
+13:02 I lie down in bed and fall asleep
 
 
 16:00 I wake up, stay in bed and relax until 18:44
@@ -2904,7 +2904,7 @@ Oct, 23
 13:34 At UPS Store for 8 minutes
 
 
-13:01 Shop in the Market of Choice at 2pm
+14:01 Shop in the Market of Choice at 2pm
 
 14:14 Stop for cigarettes
 
@@ -4061,7 +4061,7 @@ Day 72, Eugene
 Nov, 12
 
 
-12:12 Begin a new recording with a digital EEG Acquisition System
+00:12 Begin a new recording with a digital EEG Acquisition System
 
 
 06:12 I stop the recording, take off the helmet and have a shower
@@ -4821,7 +4821,7 @@ Nov, 26
 10:52 I change the water of the bucket for the electrodes
 
 
-10:36 Rinse the net and leave it to dry until tonight
+11:36 Rinse the net and leave it to dry until tonight
 
 
 12:03 After a coffee, I write my dreams until 13:47
