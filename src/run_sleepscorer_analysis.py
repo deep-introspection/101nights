@@ -14,18 +14,16 @@ epochs_clean.set_eeg_reference('average', projection=False)
 
 
 epochs_clean = mne.io.set_bipolar_reference(epochs_clean,
-                                            ['E31'], ['E241'],
+                                            ['E37'], ['E241'],
                                             # anode, cathode
-                                            ch_name=['EOG1'],
-                                            copy=True,
-                                            ch_info=dict(ch_types='eog'))
+                                            ch_name=['EOG1'])
+epochs_clean.set_channel_types({'EOG1': 'eog'})
 
 epochs_clean = mne.io.set_bipolar_reference(epochs_clean,
-                                            ['E31'], ['E238'],
+                                            ['E18'], ['E238'],
                                             # anode, cathode
-                                            ch_name=['EOG2'],
-                                            copy=True,
-                                            ch_info=dict(ch_types='eog'))
+                                            ch_name=['EOG2'])
+epochs_clean.set_channel_types({'EOG2': 'eog'})
 
 epochs_clean.plot(picks=mne.pick_types(
 	epochs_clean.info, emg=False, eeg=False, eog=True,
