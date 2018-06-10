@@ -11,7 +11,7 @@ raw = mne.io.read_raw_egi(path_to_file,
                           montage='GSN-HydroCel-256',
                           preload=True)
 #raw.crop(tmin=3600, tmax=3600*2)
-raw.filter(0.15, None, fir_design='firwin')
+raw.filter(0.15, None, fir_design='firwin', method='iir')
 raw.resample(100, npad='auto')
 raw.set_eeg_reference('average', projection=True)
 
@@ -41,5 +41,5 @@ print("{:.2f}% epochs rejected (N={})".format(
 
 
 # Save cleaned epochs
-epochs_clean.save('data/derived/cleaned_sleep_scorer_epo.fif')
-epochs_clean[index].save('../data/derived/cleaned_subset_sleep_scorer_epo.fif')
+epochs_clean.save('../data/derived/cleaned_sleep_scorer_epo.fif')
+epochs_clean[:11].save('../data/derived/cleaned_subset_sleep_scorer_epo.fif')
