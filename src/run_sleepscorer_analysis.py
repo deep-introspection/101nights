@@ -1,5 +1,5 @@
 # https://github.com/skjerns/AutoSleepScorer
-from sleepscorer import Classifier
+import sleepscorer
 from sleepscorer.tools import plot_hypnogram
 import mne
 import matplotlib.pyplot as plt
@@ -26,7 +26,7 @@ epochs_clean = mne.io.set_bipolar_reference(epochs_clean,
 epochs_clean.set_channel_types({'EOG2': 'eog'})
 
 epochs_clean.plot(picks=mne.pick_types(
-	epochs_clean.info, emg=False, eeg=False, eog=True,
+    epochs_clean.info, emg=False, eeg=False, eog=True,
     stim=False, exclude='bads'))
 
 # Pick the 3 channels: EEG, EMG, EOG
@@ -42,20 +42,22 @@ epochs_clean.filter(10., None, picks=picks,
 
 # Format for Sleep Scorer
 data = epochs_clean.get_data() # load your python array, preprocessed
-data = data[:,:,:3000]
+data = data[:,:,:3000] * 1e6
 data = np.transpose(data, (0, 2, 1))
 assert(data.ndim==3 and data.shape[1:]==(3000,3))
 
 
 # Run Sleep Scorer
-clf = Classifier()
+clf = sleepscorer.Classifier()
 # clf.download_weights()  # skip this if you already downloaded them.
 # https://www.dropbox.com/s/otm6t0u2tmbj7sd/cnn.hdf5?dl=1
 # https://www.dropbox.com/s/t6n9x9pvt5tlvj8/rnn.hdf5?dl=1
-clf.load_cnn_model('./weights/cnn.hdf5')
-clf.load_rnn_model('./weights/rnn.hdf5')
+clf.load_cnn_model('../data/derived/weights/cnn.hdf5')
+clf.load_rnn_model('../data/derived/weights/rnn.hdf5')
 preds = clf.predict(data, classes=True)
 
+
 # Plot the hypnogram
-plot_hypnogram(preds)
+stages = ['W', 'S1', 'S2', 'SWS', 'REM']
+plot_hypnogram(preds, labels = ['W', 'S1', 'S2', 'SWS', 'REM'])
 plt.show()
