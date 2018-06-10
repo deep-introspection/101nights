@@ -20,6 +20,8 @@ Scripts for the #101nights project, during the first [Brainhack Network](http://
 
 :heavy_check_mark: artifacts rejection & sensor interpolation ([autoreject](http://autoreject.github.io/))
 
+:heavy_check_mark: parse triggers from the EEG recordings
+
 :soon: semantic modeling of dreams ([word2vec](https://radimrehurek.com/gensim/models/word2vec.html))
 
 :soon: sleep stages inference ([AutoSleepScorer](https://github.com/skjerns/AutoSleepScorer))
