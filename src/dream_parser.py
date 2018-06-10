@@ -29,33 +29,30 @@ def parse_headers(source_file, header_re):
     nights, _, places, months, days = zip(*headers)
     dates = [date(YEAR, GET_MONTH(m), int(d)) for m, d in zip(months, days)]
     
-    dict_ = dict( night=nights,
-                  place=places,
-                  date=dates,
-                  text=texts )
+    index = pandas.Index(list(map(int, nights)), name='night')
+    dict_ = dict( place=places, date=dates, text=texts )
     
-    return pandas.DataFrame(dict_)
+    return pandas.DataFrame(dict_, index=index)
 
-def parse_times(df, major='night'):
+def parse_times(df):
     time_re = '\n*(\d{1,2}):(\d{1,2}) ?(.*)'
     re_time = re.compile( time_re )
 
     timesliced = df['text'].transform(lambda x: tuple(re_time.finditer(x)))
-    dtimed_texts = [ (idx, # old_index
-                     datetime(df.loc[idx, 'date'].year, df.loc[idx, 'date'].month, # datetime
-                              df.loc[idx, 'date'].day, int(ts[1]), int(ts[2])),
-                     ts[3]) # timed_text
+    dtimed_texts = [ (idx, # current index
+                     datetime( df.loc[idx, 'date'].year, df.loc[idx, 'date'].month,
+                               df.loc[idx, 'date'].day, int(ts[1]), int(ts[2]) ),
+                     ts[3]) # timed text
                     for idx, slices in timesliced.iteritems()
                     for ts in slices if ts ]
 
-    major_index = df[major] if major else df.index.to_series()
+    major_index = df.index.to_series()
     new_index = pandas.MultiIndex.from_tuples(
         [ (major_index.loc[i], dt) for i, dt, _ in dtimed_texts ],
-        names=[major if major else df.index.name, 'time'] )
+        names=[df.index.name, 'time'] )
 
-    return pandas.DataFrame( (
-        df.loc[i, ['night', 'place']].tolist() + [dt, txt]
-            for i, dt, txt in dtimed_texts ),
+    return pandas.DataFrame(
+       ( [df.loc[i, 'place'], dt, txt] for i, dt, txt in dtimed_texts ),
         columns=['night', 'place', 'datetime', 'text'],
         index=new_index
     )
