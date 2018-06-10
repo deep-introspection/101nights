@@ -26,7 +26,7 @@ Scripts for the #101nights project, during the first [Brainhack Network](http://
 
 <img src="https://img.shields.io/badge/3-Go!-green.svg?longCache=true&style=for-the-badge">
 
-:soon: sleep stages inference ([SLEEPNET](https://arxiv.org/pdf/1707.08262.pdf) or [AutoSleepScorer](https://github.com/skjerns/AutoSleepScorer))
+:soon: sleep stages inference ([AutoSleepScorer](https://github.com/skjerns/AutoSleepScorer))
 
 :heavy_minus_sign: test effect of "incepted" messages on the content of dreams (tips: use [cosine distance](https://www.researchgate.net/post/What_is_the_best_way_to_measure_text_similarities_based_on_word2vec_word_embeddings) or [n_similarity](https://tedboy.github.io/nlps/generated/generated/gensim.models.Word2Vec.n_similarity.html))
 
