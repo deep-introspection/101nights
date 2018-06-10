@@ -24,7 +24,7 @@ epochs_clean.reorder_channels(['E16', 'E218', 'E31'])
 # filter EMG >10Hz
 picks = mne.pick_types(epochs_clean.info, emg=True, eeg=False, eog=False,
                        stim=False, exclude='bads')
-epochs_clean.filter(picks=picks, 10., None, 
+epochs_clean.filter(10., None, picks=picks,
 	                fir_design='firwin', method='iir')
 
 # Format for Sleep Scorer
