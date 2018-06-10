@@ -1,3 +1,4 @@
 -e git+git@github.com:mne-tools/mne-python.git@6614a5be4c573bf06d2a2b19bd77d3b9adb5a84d#egg=mne
 autoreject==0.1.dev0
 gensim==3.4.0
+sleepscorer==0.231
