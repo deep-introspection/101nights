@@ -25,4 +25,9 @@ def get_events_from_xml():
         messages = [build_tuple(e) for e in root.getchildren() if e.tag == "message"]
         for message in messages:
             df = df.append(message, ignore_index=True)
+
+    assert len(df.time.unique()) == len(df.time)
+    df.set_index('time', drop=True, inplace=True)
+    df.sort_index(inplace=True)
+
     return df
