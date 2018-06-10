@@ -1,8 +1,11 @@
 Folder for Python scripts.
 
+# Preparation
+get_raw_data.py
+
 # Text processing
 parse_xml.py
-dream_parser.py
+run_dream_parser.py
 run_word2vec_example.py
 
 # EEG processing
