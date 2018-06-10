@@ -27,7 +27,10 @@ def get_events_from_xml():
             df = df.append(message, ignore_index=True)
 
     assert len(df.time.unique()) == len(df.time)
-    df.set_index('time', drop=True, inplace=True)
+    df.set_index('time', drop=False, inplace=True)
     df.sort_index(inplace=True)
+    df['delta_time'] = df.time.diff().dt.seconds.div(60*60, fill_value=0)
+    df['night'] = (df.delta_time > 7).cumsum() #  7h seems to be a good threshold to split days
+    df.drop(['time', 'delta_time'], axis=1, inplace=True)
 
     return df
