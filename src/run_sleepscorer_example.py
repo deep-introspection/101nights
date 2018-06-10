@@ -14,6 +14,7 @@ sleepdata = sleepscorer.sleeploader.SleepData('../data/derived/sample-psg.edf', 
 demo = sleepdata.get_data()
 assert(demo.ndim==3 and demo.shape[1:]==(3000,3))
 clf = sleepscorer.Classifier()
+
 # clf.download_weights()  # skip this if you already downloaded them.
 # https://www.dropbox.com/s/otm6t0u2tmbj7sd/cnn.hdf5?dl=1
 # https://www.dropbox.com/s/t6n9x9pvt5tlvj8/rnn.hdf5?dl=1
@@ -27,10 +28,15 @@ plot_hypnogram(preds)
 plt.show()
 
 # Debug
-# stages = {0: 'W', 1: 'S1', 2: 'S2', 3: 'SWS', 4: 'REM'}
-# for s in stages.keys():
-# 	epochs_id = np.argwhere([p==s for p in preds]).flatten()
-#   plt.plot(demo[epochs_id[0],:, :])
-# 	plt.legend(['EEG', 'EMG', 'EOG'])
-#.  plt.title(stages[s])
-# plt.show()
+stages = ['W', 'S1', 'S2', 'SWS', 'REM']
+plt.figure()
+for s, label in enumerate(stages):
+	plt.subplot(5,1,s+1)
+	epochs_id = np.argwhere([p==s for p in preds]).flatten()
+    plt.plot(demo[epochs_id[0],:, :])
+	plt.legend(['EEG', 'EMG', 'EOG'], loc=1, ncol=3)
+    plt.title(label)
+    plt.xlim([0, 3000])
+    plt.ylim([-6, 6])
+plt.tight_layout()
+plt.show()
