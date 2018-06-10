@@ -41,5 +41,5 @@ print("{:.2f}% epochs rejected (N={})".format(
 
 
 # Save cleaned epochs
-epochs_clean.save('data/derived/cleaned_sleep_scorer_epo.fif')
-epochs_clean[index].save('../data/derived/cleaned_subset_sleep_scorer_epo.fif')
+epochs_clean.save('../data/derived/cleaned_sleep_scorer_epo.fif')
+epochs_clean[:11].save('../data/derived/cleaned_subset_sleep_scorer_epo.fif')
