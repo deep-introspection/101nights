@@ -1,5 +1,8 @@
 Folder for Python scripts.
 
+# Preparation
+get_raw_data.py
+
 # Text processing
 parse_xml.py
 run_dream_parser.py
