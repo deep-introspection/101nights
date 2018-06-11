@@ -1,11 +1,13 @@
 #! /bin/env python3
 
-# GNU GPLv3
+# GNU GPLv3+
 # https://www.gnu.org/licenses/gpl-3.0.en.html
 # Contributors: Ale Abdo <abdo@member.fsf.org>
 
 """ Produces parsed CSV files ready for pandas.DataFrame
     consumption from both dreams.txt and diary.txt.
+
+    Currently expects to be run from the 'src' dir of the repo.
 
     More generally, parses a document containing chunks of
     text separated by text headers, loading them into a
@@ -21,9 +23,12 @@ YEAR = 2017
 GET_MONTH = {'Sep':9, 'Oct':10, 'Nov':11, 'Dec':12}.get
 
 def FIX_TIMEZONE(dtimed_texts):
-    """Sets datetimes to UTC"""
-    # this works since there are no records
-    # between 01:00 and 02:00 on tzchange
+    """
+    Convert datetimes for the period from Eugene-OR-USA to UTC
+    Ref: https://www.timeanddate.com/time/zone/usa/eugene
+    This simple routine works since there are no records between
+    01:00 and 02:00 at 'tzchange'
+    """
     tzchange = datetime64('2017-05-02T09:00')
     tzdelta0, tzdelta1 = timedelta64(7, 'h'), timedelta64(8, 'h')
     for item in dtimed_texts:
