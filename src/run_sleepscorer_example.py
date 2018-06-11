@@ -31,10 +31,10 @@ plt.show()
 stages = ['W', 'S1', 'S2', 'SWS', 'REM']
 plt.figure()
 for s, label in enumerate(stages):
-	plt.subplot(5,1,s+1)
-	epochs_id = np.argwhere([p==s for p in preds]).flatten()
+    plt.subplot(5,1,s+1)
+    epochs_id = np.argwhere([p==s for p in preds]).flatten()
     plt.plot(demo[epochs_id[0],:, :])
-	plt.legend(['EEG', 'EMG', 'EOG'], loc=1, ncol=3)
+    plt.legend(['EEG', 'EMG', 'EOG'], loc=1, ncol=3)
     plt.title(label)
     plt.xlim([0, 3000])
     plt.ylim([-6, 6])
