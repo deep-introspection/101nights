@@ -8,7 +8,8 @@ def text_to_datetime(time_txt):
 
 def build_tuple(message):
     time, word = message.getchildren()
-    return {"time": text_to_datetime(time.text), "word": word.text, "type": message.get(key="type")}
+    return {"time": text_to_datetime(time.text), "word": word.text,
+            "type": message.get(key="type")}
 
 # def parse_file(fname):
 
@@ -22,7 +23,8 @@ def get_events_from_xml():
         parser = etree.XMLParser(ns_clean=True, recover=True)
         tree = etree.fromstring("<data>{0}</data>".format(xml), parser)
         root = tree.getroottree().getroot()
-        messages = [build_tuple(e) for e in root.getchildren() if e.tag == "message"]
+        messages = [build_tuple(e) for e in root.getchildren()
+                    if e.tag == "message"]
         for message in messages:
             df = df.append(message, ignore_index=True)
 
@@ -31,6 +33,6 @@ def get_events_from_xml():
     df.sort_index(inplace=True)
     df['delta_time'] = df.time.diff().dt.seconds.div(60*60, fill_value=0)
     df['night'] = (df.delta_time > 7).cumsum() #  7h seems to be a good threshold to split days
-    df.drop(['time', 'delta_time'], axis=1, inplace=True)
+    #df.drop(['time', 'delta_time'], axis=1, inplace=True)
 
     return df
